@@ -2,7 +2,7 @@
 ~/.deskterm/colorize.sh "1;33" "---BATTERY INFORMATION---"
 echo ''
 echo ''
-if [ -f "/sys/class/power_supply/BAT0" ]; then
+if [ -f "/sys/class/power_supply/BAT0/charge_now" ]; then
 ~/.deskterm/colorize.sh "1;34" "Ideal capacity:   $(cat /sys/class/power_supply/BAT0/charge_full_design) [uAh]"
 ~/.deskterm/colorize.sh "1;34" "Current capacity: $(cat /sys/class/power_supply/BAT0/charge_full) [uAh]"
 echo ''
