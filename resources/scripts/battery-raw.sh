@@ -2,6 +2,7 @@
 ~/.deskterm/colorize.sh "1;33" "---BATTERY INFORMATION---"
 echo ''
 echo ''
+if [ -f "/sys/class/power_supply/BAT0" ]; then
 ~/.deskterm/colorize.sh "1;34" "Ideal capacity:   $(cat /sys/class/power_supply/BAT0/charge_full_design) [uAh]"
 ~/.deskterm/colorize.sh "1;34" "Current capacity: $(cat /sys/class/power_supply/BAT0/charge_full) [uAh]"
 echo ''
@@ -30,3 +31,6 @@ printf "\033["$BARCOLOR"mCharge:           %.2f%%\033[0m\n" "$PERC"
 echo ''
 ~/.deskterm/colorize.sh "$BARCOLOR" "┏$BAREXPR┓"
 ~/.deskterm/colorize.sh "$BARCOLOR" "┗$BAREXPR┛"
+else
+~/.deskterm/colorize.sh "1;33" "No battery detected."
+fi

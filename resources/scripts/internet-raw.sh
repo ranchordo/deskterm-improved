@@ -18,7 +18,7 @@ fi
 echo ''
 echo ''
 ~/.deskterm/colorize.sh "1;36" "WIFI INFORMATION:"
-~/.deskterm/colorize.sh "1;34" "$(iw dev wlp0s20f3 link)"
+~/.deskterm/colorize.sh "1;34" "$(iw dev $(cat /proc/net/wireless | perl -ne '/(\w+):/ && print $1') link)"
 echo ''
 ~/.deskterm/colorize.sh "1;36" "IP ROUTES:"
 ~/.deskterm/colorize.sh "1;34" "$(ip route)"
