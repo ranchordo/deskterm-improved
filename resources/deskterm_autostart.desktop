@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/ranchordo/.deskterm/startup.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Deskterm
+Name=Deskterm
+Comment[en_US]=
+Comment=
