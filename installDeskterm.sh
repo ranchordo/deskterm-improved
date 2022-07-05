@@ -1,4 +1,4 @@
-sudo apt install devilspie2 tmux python3
+sudo apt install devilspie2 tmux python3 nvtop
 echo Installed dependencies
 PROFILE_UUID="df2e173b-d4f4-402f-be7e-1e3248594e55"
 NEW_PROFILE_LIST=$(python3 -c "import sys;orig=sys.argv[2].replace('[','').replace(']','').replace('\'','').split(', ');orig.append(sys.argv[1]);filt=[i for n, i in enumerate(orig) if i not in orig[:n]];print(filt)" "$PROFILE_UUID" "$(gsettings get org.gnome.Terminal.ProfilesList list)")
