@@ -1,5 +1,6 @@
 #!/bin/bash
 devilspie2 &
+tmux kill-session -t Deskterm || true
 tmux new-session -d -s Deskterm
 sleep 0.1
 BASH_POST_RC="alias exit='echo Not exiting, running as background.'; alias yexit='exec bash exit'" gnome-terminal --window-with-profile=Deskterm --role=Deskterm --hide-menubar -- bash -c "tmux attach -t Deskterm"
