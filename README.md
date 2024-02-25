@@ -2,7 +2,7 @@
 Deskterm - because who doesn't want a desktop that looks like this?  
 ![Screenshot](https://raw.githubusercontent.com/ranchordo/deskterm-improved/other/screenshot.png)
   
-Deskterm improved is made mostly for Ubuntu, and should work on other Debian-based systems running with GNOME (eg. Pop!, Elementary, etc). Running on other systems should be doable, but it may require some modification.  
+Deskterm improved is made mostly for Ubuntu, and should work on other Debian-based systems running with GNOME (on X11!) (eg. Pop!, Elementary, etc). Running on other systems should be doable, but it may require some modification.  
 ## Installation
 Installation is as easy as:
 ```
