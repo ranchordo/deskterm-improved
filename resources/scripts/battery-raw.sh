@@ -15,6 +15,10 @@ echo ''
 CHARGENOW="$(cat /sys/class/power_supply/BAT0/charge_now)"
 CHARGETOTAL="$(cat /sys/class/power_supply/BAT0/charge_full)"
 echo ''
+CHRG=$(cat /sys/class/power_supply/BAT0/charge_now)
+CURRENT=$(cat /sys/class/power_supply/BAT0/current_now)
+TIME=$(printf "%.2f" $(echo "$CHRG / $CURRENT" | bc -l))
+~/.deskterm/colorize.sh "1;34" "Time remaining:   $TIME [h]"
 echo ''
 
 PERC=$(echo "100.0 * ($CHARGENOW / $CHARGETOTAL)" | bc -l)
